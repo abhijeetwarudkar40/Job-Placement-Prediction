@@ -2,10 +2,6 @@
 
 ## 📌 Overview
 
-This project is a Machine Learning-based application that predicts whether a student is likely to be placed based on academic performance, skills, and other factors.
-
-## 📌 Overview
-
 This project is a **Machine Learning-based system** that predicts:
 
 * ✅ **Student Placement Status** (Placed / Not Placed)

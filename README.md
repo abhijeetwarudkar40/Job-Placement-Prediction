@@ -4,42 +4,68 @@
 
 This project is a Machine Learning-based application that predicts whether a student is likely to be placed based on academic performance, skills, and other factors.
 
-It uses a **Random Forest Classifier** trained on student data and provides predictions through an interactive user interface.
+## 📌 Overview
+
+This project is a **Machine Learning-based system** that predicts:
+
+* ✅ **Student Placement Status** (Placed / Not Placed)
+* 💰 **Expected Salary (LPA)**
+
+It uses real-world student data including academic performance, skills, and activities.
 
 ---
 
 ## 🚀 Features
 
-* Predicts student placement (Placed / Not Placed)
-* Uses real-world student attributes like CGPA, internships, skills, etc.
-* Interactive UI built using **Streamlit**
-* Feature selection for improved accuracy
-* Model evaluation using accuracy and cross-validation
+* 🎯 Placement Prediction using **Random Forest Classifier**
+* 💰 Salary Prediction using **Regression Model**
+* 📈 Placement Probability Visualization
+* 🧠 Feature Engineering (skill_score, profile_score)
+* 🖥️ Interactive UI using **Streamlit**
 
 ---
 
-## 🧠 Machine Learning Model
+## 🧠 Machine Learning Models
 
-* Algorithm: **Random Forest Classifier**
+### 🔹 Placement Model
+
+* Algorithm: Random Forest Classifier
 * Accuracy: ~89%
-* Evaluation Metrics:
+* Output: Placement + Probability
 
-  * Accuracy Score
-  * Cross Validation Score
+### 🔹 Salary Model
+
+* Algorithm: XGBoost Regressor
+* R² Score: ~0.77
+* Output: Salary in LPA
 
 ---
 
 ## 📊 Features Used
 
+### Placement Features:
+
 * CGPA
-* Internships Completed
-* Projects Completed
-* Coding Skill Rating
-* Communication Skill Rating
-* Aptitude Skill Rating
-* Certifications Count
+* Internships
+* Projects
+* Coding Skill
+* Communication Skill
+* Aptitude
+* Certifications
 * Backlogs
+* Branch (CSE)
+
+### Salary Features:
+
+* CGPA
+* 10th Percentage
+* 12th Percentage
+* Internships & Projects
+* Skills (Coding, Communication, Aptitude)
+* Certifications & Hackathons
+* Attendance
 * Branch
+* Engineered Features (skill_score, profile_score)
 
 ---
 
@@ -48,6 +74,7 @@ It uses a **Random Forest Classifier** trained on student data and provides pred
 * Python
 * Pandas, NumPy
 * Scikit-learn
+* XGBoost
 * Streamlit
 * Matplotlib / Seaborn
 
@@ -55,26 +82,26 @@ It uses a **Random Forest Classifier** trained on student data and provides pred
 
 ## ▶️ How to Run
 
-### 1. Clone the repository
+### 1️⃣ Clone the repository
 
-```bash
-git clone <https://github.com/abhijeetwarudkar40/Job-Placement-Prediction>
-cd <project-folder>
+```
+git clone https://github.com/abhijeetwarudkar40/Job-Placement-Prediction.git
+cd Job-Placement-Prediction
 ```
 
-### 2. Install dependencies
+### 2️⃣ Install dependencies
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
-### 3. Run the application
+### 3️⃣ Run the application
 
-```bash
+```
 streamlit run app.py
 ```
 
-### 4. Open in browser
+### 4️⃣ Open in browser
 
 ```
 http://localhost:8501
@@ -85,20 +112,28 @@ http://localhost:8501
 ## 📁 Project Structure
 
 ```
-project/
+Job-Placement-Prediction/
 │── app.py
 │── placement_model.pkl
-│── Placement_Predictor.ipynb
+│── salary_model.pkl
+│── notebook.ipynb
+│── requirements.txt
 │── README.md
 ```
 
 ---
 
-## 📈 Future Improvements
+## 📈 Results
 
-* Add more features for better accuracy
-* Deploy the app online
-* Improve UI/UX design
-* Use advanced models like XGBoost
+* Placement Model Accuracy: **~89%**
+* Salary Model R² Score: **~0.77**
+* MAE: ~1 LPA
 
+---
+
+## 🔮 Future Improvements
+
+* Add more real-world features (company, location)
+* Improve salary prediction accuracy
+* Deploy app online (Streamlit Cloud)
 ---
